@@ -13,7 +13,9 @@ export function Repo() {
 		<div className="repo-data">
 			<h1>{repo.name}</h1>
 			<h3>Owner: {repo.owner.login}</h3>
-			<a href={repo.html_url}>Github link</a>
+			<a href={repo.html_url} target="_blank">
+				Github link
+			</a>
 			<div className="row">
 				<p>Is repo private?</p>
 				<div className="data">{repo.private ? "True" : "False"}</div>
