@@ -5,6 +5,7 @@ import Root, { loader as rootLoader } from "./routes/root";
 import { Repo, repoLoader } from "./routes/Repo";
 import ErrorPage from "./error-page";
 import "./index.css";
+import NotFound from "./404";
 
 const router = createBrowserRouter([
 	{
@@ -17,6 +18,14 @@ const router = createBrowserRouter([
 				path: "repos/:repoName",
 				element: <Repo />,
 				loader: repoLoader,
+			},
+			{
+				path: "/error-boundary-test",
+				element: <ErrorPage />,
+			},
+			{
+				path: "*",
+				element: <NotFound />,
 			},
 		],
 	},

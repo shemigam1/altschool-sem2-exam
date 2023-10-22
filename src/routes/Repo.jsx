@@ -4,7 +4,8 @@ import "../index.css";
 
 export async function repoLoader({ params }) {
 	const repo = await getSingleRepo(params.repoName);
-	return { repo };
+	const dummyRepo = await getSingleRepo(undefined);
+	return { repo, dummyRepo };
 }
 
 export function Repo() {
@@ -36,3 +37,5 @@ export function Repo() {
 		</div>
 	);
 }
+
+// export function ErrorRepo(){}
