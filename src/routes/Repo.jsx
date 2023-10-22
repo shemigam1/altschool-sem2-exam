@@ -23,11 +23,13 @@ export function Repo() {
 			</div>
 			<div className="row">
 				<p>Description</p>
-				<div className="data">{repo.description}</div>
+				<div className="data">
+					{repo.description || "No description for this repo"}
+				</div>
 			</div>
 			<div className="row">
 				<p>Main Language: </p>
-				<div className="data">{repo.language}</div>
+				<div className="data">{repo.language || "To be determined"}</div>
 			</div>
 			<div className="row">
 				<p>
