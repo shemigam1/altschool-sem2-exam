@@ -8,7 +8,6 @@ export async function loader() {
 }
 export default function Root() {
 	const { repos } = useLoaderData();
-	if (Outlet) console.log("yayyyy");
 
 	return (
 		<>
@@ -38,6 +37,9 @@ export default function Root() {
 									</Link>
 								</li>
 							))}
+							<li key={100}>
+								<Link to={`fakerepo`}>Fake Repo to test 404</Link>
+							</li>
 						</ul>
 					) : (
 						<p>
