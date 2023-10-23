@@ -322,7 +322,7 @@ i {
 
 .dark-mode {
   background-color: #252323;
-
+  color: #DAD2BC;
 }
 
 .dark-mode > .repo-data {
